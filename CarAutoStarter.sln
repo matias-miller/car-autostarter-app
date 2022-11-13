@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarAutoStarter.Android", "CarAutoStarter\CarAutoStarter.Android\CarAutoStarter.Android.csproj", "{7C8648F5-BAFC-45BD-BC1A-5B847A8B248B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarAutoStarter", "CarAutoStarter\CarAutoStarter\CarAutoStarter.csproj", "{8079C537-EDFB-4F02-9936-5A0ECB0ED693}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C8648F5-BAFC-45BD-BC1A-5B847A8B248B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8648F5-BAFC-45BD-BC1A-5B847A8B248B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8648F5-BAFC-45BD-BC1A-5B847A8B248B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7C8648F5-BAFC-45BD-BC1A-5B847A8B248B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8648F5-BAFC-45BD-BC1A-5B847A8B248B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C8648F5-BAFC-45BD-BC1A-5B847A8B248B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8079C537-EDFB-4F02-9936-5A0ECB0ED693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8079C537-EDFB-4F02-9936-5A0ECB0ED693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8079C537-EDFB-4F02-9936-5A0ECB0ED693}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8079C537-EDFB-4F02-9936-5A0ECB0ED693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8079C537-EDFB-4F02-9936-5A0ECB0ED693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8079C537-EDFB-4F02-9936-5A0ECB0ED693}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F86914C0-7718-4B4B-916F-F75F9A73498D}
+	EndGlobalSection
+EndGlobal
