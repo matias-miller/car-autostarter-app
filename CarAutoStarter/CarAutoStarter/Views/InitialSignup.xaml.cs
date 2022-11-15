@@ -10,29 +10,28 @@ using Xamarin.Forms.Xaml;
 
 namespace CarAutoStarter.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CreateUserPage : ContentPage
-    {
-        Users _UserList;
-        User _CurrentUser;
-        public CreateUserPage(User CurrentUser, Users UserList)
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class InitialSignup : ContentPage
+	{
+
+        public InitialSignup()
         {
             InitializeComponent();
-            BindingContext = _UserList = UserList;
-            BindingContext = _CurrentUser = CurrentUser;
         }
 
         private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             submitBtn.IsEnabled = e.Value;
+            entryFirstName.IsReadOnly= true;
         }
 
 
 
-        private void submitBtn_Clicked(object sender, EventArgs e)
+        async private void submitBtn_Clicked(object sender, EventArgs e)
         {
 
-            User NewUser = new User() {
+            User NewUser = new User()
+            {
                 FirstName = entryFirstName.Text,
                 LastName = entryLastName.Text,
                 Password = entryPassword.Text,
@@ -42,8 +41,11 @@ namespace CarAutoStarter.Views
                 Phone = entryPhone.Text,
             };
 
-            _UserList.AddUser(NewUser);
-            Navigation.PopAsync();
+            Users UserList = new Users();
+            UserList.AddUser(NewUser);
+            myForm.IsVisible = false;
+
+            await Navigation.PushModalAsync(new NavigationPage(new MainPage(NewUser, UserList)));
         }
     }
 }

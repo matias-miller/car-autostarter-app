@@ -12,27 +12,29 @@ namespace CarAutoStarter
 {
     public partial class MainPage : ContentPage
     {
-
-        public MainPage()
+        Users _UserList;
+        User _CurrentUser;
+        public MainPage(User CurrentUser, Users UserList)
         {
             InitializeComponent();
-            this.Title = "Welcome";
-            
+            BindingContext = _UserList = UserList;
+            BindingContext = _CurrentUser = CurrentUser;
+            this.Title = String.Format("Hello {0}", CurrentUser.FirstName);
         }
 
-        private void AddNewCar_Clicked(object sender, EventArgs e)
+        private void addNewCar_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AddNewCarDetails());
         }
 
-        private void CarTest_Clicked(object sender, EventArgs e)
+        private void settingsPage_Clicked(object sender, EventArgs e)
         {
-
+            //Navigation.PushAsync(new SettingsPage());
         }
 
-        private void NewUser_Clicked(object sender, EventArgs e)
+        private void addUserPage_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CreateUserPage());
+            Navigation.PushAsync(new CreateUserPage(_CurrentUser, _UserList));
         }
     }
 }

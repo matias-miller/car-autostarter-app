@@ -5,13 +5,16 @@
              Title="Navigation Home">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Settings" Order="Secondary"/>
-        <ToolbarItem x:Name="NewUser" Text="New User" Order="Secondary" Clicked="NewUser_Clicked"/>
+        <ToolbarItem x:Name="settingsPage" Text="Settings" Order="Secondary" Clicked="settingsPage_Clicked"/>
+        <ToolbarItem x:Name="addUserPage" Text="Add User" Order="Secondary" Clicked="addUserPage_Clicked"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <Label FontSize="24"  Padding="20 20 100" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Text="No user account created. Use the Navigation bar to create an account."/>
-
+        <Button Text="Car1"/>
+        <Button Text="Car2"/>
+        <Button Text="Car3"/>
+        <Button Text="Car4"/>
+        <Button Text="Car5"/>
     </StackLayout>
 
 </ContentPage>

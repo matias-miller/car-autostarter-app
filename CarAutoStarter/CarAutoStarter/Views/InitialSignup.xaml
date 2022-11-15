@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarAutoStarter.Views.InitialSignup"
+             Padding="50">
+    
+    <ContentPage.Content>
+        <StackLayout x:Name="myForm">
+            <Frame>
+                <Label Text="Thank You for using Car Auto Starter! Enter your details to continue."
+                       FontSize="30"/>
+            </Frame>
+            <Entry x:Name="entryFirstName" Placeholder="First Name" Keyboard="Text"/>
+            <Entry x:Name="entryLastName" Placeholder="Last Name" Keyboard="Text"/>
+            <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="True"/>
+            <Entry x:Name="entryAge" Placeholder="Age" Keyboard="Numeric"/>
+            <Picker x:Name="pickerGender" Title="Gender"  FontSize="Large">
+                <Picker.Items>
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                    <x:String>Other</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="entryEmail" Placeholder="Email" Keyboard="Email"/>
+            <Entry x:Name="entryPhone" Placeholder="Phone Number" Keyboard="Telephone"/>
+            <CheckBox CheckedChanged="CheckBox_CheckedChanged" VerticalOptions="EndAndExpand"/>
+            <Label x:Name="box" Text="I agree to Rhino Commando Squad's Terms and Conditions" TextColor="Black"/>
+            <Button x:Name="submitBtn" Text="Submit" Clicked="submitBtn_Clicked" BackgroundColor="Green" TextColor="White"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
