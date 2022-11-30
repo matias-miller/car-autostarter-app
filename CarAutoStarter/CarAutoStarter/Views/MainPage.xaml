@@ -6,15 +6,18 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="settingsPage" Text="Settings" Order="Secondary" Clicked="settingsPage_Clicked"/>
-        <ToolbarItem x:Name="addUserPage" Text="Add User" Order="Secondary" Clicked="addUserPage_Clicked"/>
+        <ToolbarItem x:Name="addUserPageTool" Text="Add User" Order="Secondary" Clicked="addUserPage_Clicked"/>
+        <ToolbarItem x:Name="adminPage" Text="Admin Page" Order="Secondary"/>
+        <ToolbarItem x:Name="demoPage" Text="Demo Page" Order="Secondary"/>
     </ContentPage.ToolbarItems>
 
-    <StackLayout>
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
         <Button Text="Car1"/>
         <Button Text="Car2"/>
         <Button Text="Car3"/>
         <Button Text="Car4"/>
         <Button Text="Car5"/>
+        <Button x:Name="addUserPage" Text="Add New User" Padding="30" Clicked="addUserPage_Clicked"/>
     </StackLayout>
 
 </ContentPage>

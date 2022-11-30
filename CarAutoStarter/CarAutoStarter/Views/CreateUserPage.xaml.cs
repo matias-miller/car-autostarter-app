@@ -43,7 +43,8 @@ namespace CarAutoStarter.Views
             };
 
             _UserList.AddUser(NewUser);
-            Navigation.PopAsync();
+            Application.Current.MainPage = new NavigationPage(new MainPage(NewUser, _UserList));
+
         }
     }
 }

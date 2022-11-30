@@ -19,6 +19,9 @@
     <Compile Update="Views\CreateUserPage.xaml.cs">
       <DependentUpon>CreateUserPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\InitialMainPage.xaml.cs">
+      <DependentUpon>InitialMainPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +35,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SplashScreen.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

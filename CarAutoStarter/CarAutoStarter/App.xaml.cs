@@ -14,7 +14,7 @@ namespace CarAutoStarter
         {
             InitializeComponent();
 
-            MainPage = new InitialSignup();
+            MainPage = new NavigationPage(new SplashScreen());
         }
 
         protected override void OnStart()
