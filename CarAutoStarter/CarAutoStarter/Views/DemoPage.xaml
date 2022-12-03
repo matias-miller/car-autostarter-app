@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarAutoStarter.Views.DemoPage"
+             Title="Demo Page">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" Padding="20, 10">
+            <Button Text="Generate Random Log Data"/>
+            <Button Text="Generate Car Data" />
+            <Button x:Name="restrictedAccount" Text="Simulate Restricted Account" Clicked="restrictedAccount_Clicked"/>
+            <Button x:Name="getLoc" Text="Test GPS Services" Clicked="getLoc_Clicked"/>
+            <Label x:Name="resultLocation"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

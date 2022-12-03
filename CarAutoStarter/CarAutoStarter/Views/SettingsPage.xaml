@@ -1,8 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarAutoStarter.Views.SettingsPage">
+             x:Class="CarAutoStarter.Views.SettingsPage"
+             Title="Settings">
 
-    <Label Text="Settings page, work in progress :)"/>
-
+    <StackLayout Padding="30">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Place new controls here -->
+            <Label Grid.Column="0" Text="Toggle Location Services"  FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+            <Switch Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center"/>
+        </Grid>
+    </StackLayout>
+    
 </ContentPage>

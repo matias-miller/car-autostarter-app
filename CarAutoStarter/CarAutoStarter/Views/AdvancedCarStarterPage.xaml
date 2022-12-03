@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarAutoStarter.Views.AdvancedCarStarterPage"
+             Title="Advanced Options">
+    
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Padding="50, 40">
+                <Button x:Name="carEngine" Text="Engine OFF. Click to START." BackgroundColor="Red" TextColor="White" Clicked="carEngine_Clicked"/>
+                <Button x:Name="carAlarm" Text="Car Alarm OFF. Click to Turn ON" BackgroundColor="Red" TextColor="White" Clicked="carAlarm_Clicked"/>
+                <Button x:Name="acUnit" Text="A/C OFF. Click to Turn ON."  BackgroundColor="Red" TextColor="White" Clicked="acUnit_Clicked"/>
+                <Button x:Name="heatedSeats" Text="Heating seats OFF. Click to Turn ON."  BackgroundColor="Red" TextColor="White" Clicked="heatedSeats_Clicked"/>
+                <Button x:Name="windowStatus" Text="Windows rolled DOWN. Click to roll UP."  BackgroundColor="Red" TextColor="White" Clicked="windowStatus_Clicked"/>
+                <Button x:Name="nightMode" Text="Nightmode DISABLED. Click to ENABLE."  BackgroundColor="Red" TextColor="White" Clicked="nightMode_Clicked"/>
+                <Button x:Name="dogMode" Text="Passanger/Dog mode DISABLED. Click to ENABLE."  BackgroundColor="Red" TextColor="White" Clicked="dogMode_Clicked"/>
+                <Label Text="Pick a Tempature" FontAttributes="Bold" FontSize="Large"/>
+                <Entry x:Name="carInteriorTemp" Placeholder="Enter car's interior temperture in degrees (car must be on)" Keyboard="Numeric"/>
+                <Label Text="Enter Autostart Timer" FontAttributes="Bold" FontSize="Large"/>
+                <Entry x:Name="carTimer" Placeholder="Set autostart/stop timer in minutes" Keyboard="Numeric"/>
+                <Button x:Name="carTimerButton" Text="Start Timer"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

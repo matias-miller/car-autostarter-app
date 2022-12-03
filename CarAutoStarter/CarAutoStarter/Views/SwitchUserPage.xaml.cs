@@ -11,19 +11,21 @@ using Xamarin.Forms.Xaml;
 namespace CarAutoStarter.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SettingsPage : ContentPage
+    public partial class SwitchUserPage : ContentPage
     {
         Users _UserList;
         User _CurrentUser;
         Settings _UserSettings;
         Cars _CarList;
-        public SettingsPage(User CurrentUser, Users UserList, Settings UserSettings, Cars CarList)
+        Journal _EntireJournal;
+        public SwitchUserPage(User CurrentUser, Users UserList, Settings UserSettings, Cars CarList, Journal EntireJournal)
         {
             InitializeComponent();
             BindingContext = _UserList = UserList;
-            BindingContext = _CarList = CarList;
             BindingContext = _UserSettings = UserSettings;
             BindingContext = _CurrentUser = CurrentUser;
+            BindingContext = _CarList = CarList;
+            BindingContext = _EntireJournal = EntireJournal;
         }
     }
 }

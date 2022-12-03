@@ -6,7 +6,7 @@ namespace CarAutoStarter.Models
 {
     public class Users
     {
-        private List<User> ListOfUsers = new List<User>();
+        public List<User> ListOfUsers = new List<User>();
 
         public void AddUser(User NewUser)
         {

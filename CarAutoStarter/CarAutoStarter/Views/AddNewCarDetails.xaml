@@ -1,12 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarAutoStarter.Views.AddNewCarDetails">
+             x:Class="CarAutoStarter.Views.AddNewCarDetails"
+             Title="Add New Car" 
+             Padding="30">
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Enter Car Details"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
+            <Label Text="Enter Details to Continue." FontAttributes="Bold" FontSize="Title"></Label>
+            <Entry x:Name="entryCarNickname" Placeholder="Car Nickname" Keyboard="Text"/>
+            <Picker x:Name="pickerCarType" Title="Car Model"  FontSize="Large">
+                <Picker.Items>
+                    <x:String>Sedan</x:String>
+                    <x:String>Hatchback</x:String>
+                    <x:String>Minivan</x:String>
+                    <x:String>Truck</x:String>
+                    <x:String>SUV</x:String>
+                    <x:String>Other</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="entryCarModelYear" Placeholder="Car Model Year" Keyboard="Numeric"/>
+            <Button x:Name="submitBtn" VerticalOptions="EndAndExpand" Text="Submit" Clicked="submitBtn_Clicked" BackgroundColor="Green" TextColor="White"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

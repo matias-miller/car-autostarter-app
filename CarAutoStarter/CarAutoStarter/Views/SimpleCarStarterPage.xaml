@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarAutoStarter.Views.SimpleCarStarterPage"
+             Title="Basic Options">
+
+    <ContentPage.Content>
+
+        <Grid>
+            <StackLayout Padding="50, 40">
+                <Button x:Name="carEngine" Text="Engine OFF. Click to START." BackgroundColor="Red" TextColor="White" Clicked="carEngine_Clicked"/>
+                <Button x:Name="carAlarm" Text="Car Alarm OFF. Click to Turn ON" BackgroundColor="Red" TextColor="White" Clicked="carAlarm_Clicked"/>
+                <Button x:Name="acUnit" Text="A/C OFF. Click to Turn ON."  BackgroundColor="Red" TextColor="White" Clicked="acUnit_Clicked"/>
+                <Label Text="Pick a Tempature..." FontAttributes="Bold" FontSize="Large"/>
+                <Picker x:Name="tempSelector" Title="Pick Tempature Preset"  FontSize="Large">
+                    <Picker.Items>
+                        <x:String>Cold</x:String>
+                        <x:String>Cool</x:String>
+                        <x:String>Warm</x:String>
+                        <x:String>Hot</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+
+            <StackLayout Padding="50, 40" VerticalOptions="EndAndExpand">
+                <Button x:Name="gotoAdvancedStarter" Text="Open Advanced Auto Starter" Clicked="gotoAdvancedStarter_Clicked"/>
+                <Button x:Name="gotoJournal" Text="View Vehicle Journal" Clicked="gotoJournal_Clicked"/>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

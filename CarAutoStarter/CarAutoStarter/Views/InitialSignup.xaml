@@ -2,28 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CarAutoStarter.Views.InitialSignup"
-             Title="Registration" 
+             Title="Create your first account" 
              Padding="30">
 
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Enter Details to Continue." FontAttributes="Bold" FontSize="Medium"></Label>
-            <Entry x:Name="entryFirstName" Placeholder="First Name" Keyboard="Text"/>
-            <Entry x:Name="entryLastName" Placeholder="Last Name" Keyboard="Text"/>
-            <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="True"/>
-            <Entry x:Name="entryAge" Placeholder="Age" Keyboard="Numeric"/>
-            <Picker x:Name="pickerGender" Title="Gender"  FontSize="Large">
-                <Picker.Items>
-                    <x:String>Male</x:String>
-                    <x:String>Female</x:String>
-                    <x:String>Other</x:String>
-                </Picker.Items>
-            </Picker>
-            <Entry x:Name="entryEmail" Placeholder="Email" Keyboard="Email"/>
-            <Entry x:Name="entryPhone" Placeholder="Phone Number" Keyboard="Telephone"/>
-            <CheckBox CheckedChanged="CheckBox_CheckedChanged" VerticalOptions="EndAndExpand"/>
-            <Label Text="I agree to Rhino Commando Squad's Terms and Conditions" TextColor="Black"/>
-            <Button x:Name="submitBtn" Text="Submit" Clicked="submitBtn_Clicked" BackgroundColor="Green" TextColor="White"></Button>
-        </StackLayout>
+        <Grid>
+            <StackLayout>
+                <Label Text="Thank You for using Car Auto Starter! Enter your details to continue." FontAttributes="Bold" FontSize="Title"></Label>
+                <Entry x:Name="entryFirstName" Placeholder="First Name" Keyboard="Text"/>
+                <Entry x:Name="entryLastName" Placeholder="Last Name" Keyboard="Text"/>
+                <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="True"/>
+                <Entry x:Name="entryAge" Placeholder="Age" Keyboard="Numeric"/>
+                <Picker x:Name="pickerGender" Title="Gender"  FontSize="Large">
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                        <x:String>Other</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="entryEmail" Placeholder="Email" Keyboard="Email"/>
+                <Entry x:Name="entryPhone" Placeholder="Phone Number" Keyboard="Telephone"/>
+                <CheckBox CheckedChanged="CheckBox_CheckedChanged" VerticalOptions="EndAndExpand"/>
+                <Label Text="I agree to Rhino Commando Squad's Terms and Conditions"/>
+                <Button x:Name="submitBtn" Text="Submit" Clicked="submitBtn_Clicked" BackgroundColor="Green" TextColor="White"></Button>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
+    
 </ContentPage>

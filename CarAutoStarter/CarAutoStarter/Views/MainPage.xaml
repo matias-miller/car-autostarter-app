@@ -6,18 +6,31 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="settingsPage" Text="Settings" Order="Secondary" Clicked="settingsPage_Clicked"/>
-        <ToolbarItem x:Name="addUserPageTool" Text="Add User" Order="Secondary" Clicked="addUserPage_Clicked"/>
-        <ToolbarItem x:Name="adminPage" Text="Admin Page" Order="Secondary"/>
-        <ToolbarItem x:Name="demoPage" Text="Demo Page" Order="Secondary"/>
+        <ToolbarItem x:Name="addNewUser" Text="Add User" Order="Secondary" Clicked="addNewUser_Clicked"/>
+        <ToolbarItem x:Name="adminPage" Text="Admin Page" Order="Secondary" Clicked="adminPage_Clicked"/>
+        <ToolbarItem x:Name="demoPage" Text="Demo Page" Order="Secondary" Clicked="demoPage_Clicked"/>
     </ContentPage.ToolbarItems>
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Button Text="Car1"/>
-        <Button Text="Car2"/>
-        <Button Text="Car3"/>
-        <Button Text="Car4"/>
-        <Button Text="Car5"/>
-        <Button x:Name="addUserPage" Text="Add New User" Padding="30" Clicked="addUserPage_Clicked"/>
-    </StackLayout>
+
+    <Grid>
+
+        <StackLayout HorizontalOptions="CenterAndExpand" Padding="20, 10">
+            <Label x:Name="timeRemaining" Text="Time remaining: 1:06" FontSize="Large" FontAttributes="Bold" IsVisible="False"/>
+        </StackLayout>
+
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="20, 10">
+            <Button x:Name="car1" Text="Ford F150" Clicked="car1_Clicked"/>
+            <Button x:Name="car2" Text="Surbaru Outback" Clicked="car2_Clicked"/>
+            <Button x:Name="car3" Text="Mercedes Benz" Clicked="car3_Clicked"/>
+            <Button x:Name="car4" Text="Tesla Model X" Clicked="car4_Clicked"/>
+            <Button x:Name="car5" Text="Toyota Corola" Clicked="car5_Clicked"/>
+        </StackLayout>
+
+        <StackLayout Padding="50, 40" VerticalOptions="EndAndExpand">
+            <Button x:Name="switchUser" Text="Switch User" Clicked="switchUser_Clicked"/>
+            <Button x:Name="deleteCar" Text="Delete Car" Clicked="deleteCar_Clicked"/>
+            <Button x:Name="addNewCar" Text="Add New Car" Clicked="addNewCar_Clicked"/>
+        </StackLayout>
+    </Grid>
 
 </ContentPage>

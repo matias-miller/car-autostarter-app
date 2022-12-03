@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarAutoStarter.Views.VehicleJournal"
+             Title="Vehicle Journal">
+
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Padding="50, 40">
+                <Picker x:Name="filterByDate" Title="Pick Filter Date Range"  FontSize="Large">
+                    <Picker.Items>
+                        <x:String>1 Day</x:String>
+                        <x:String>1 Week</x:String>
+                        <x:String>1 Month</x:String>
+                        <x:String>Entire Log</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="filterByType" Title="Pick by Log Type"  FontSize="Large">
+                    <Picker.Items>
+                        <x:String>Error Message</x:String>
+                        <x:String>Personal Message</x:String>
+                        <x:String>Automated System Message</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="journalMessage" Placeholder="Enter a personal message for log"/>
+                <Button x:Name="submitJournalMessage" Text="Submit message"/>
+                <StackLayout Padding="40, 60">
+                    <Label Text="User Message" FontSize="Title" FontAttributes="Bold"/>
+                    <Label Text="Go get Milk" FontSize="Medium"/>
+                    <Label Text="Automated System Message" FontSize="Title" FontAttributes="Bold"/>
+                    <Label Text="Gas low. Refill gas." FontSize="Medium"/>
+                    <Label Text="Error" FontSize="Title" FontAttributes="Bold"/>
+                    <Label Text="Gas Engine Burning Oil" FontSize="Medium"/>
+                    <Label Text="Error" FontSize="Title" FontAttributes="Bold"/>
+                    <Label Text="Air Pressure Critically Low" FontSize="Medium"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -15,11 +15,17 @@ namespace CarAutoStarter.Views
     {
         Users _UserList;
         User _CurrentUser;
-        public CreateUserPage(User CurrentUser, Users UserList)
+        Settings _UserSettings;
+        Cars _CarList;
+        Journal _EntireJournal;
+        public CreateUserPage(User CurrentUser, Users UserList, Settings UserSettings, Cars CarList, Journal EntireJournal)
         {
             InitializeComponent();
             BindingContext = _UserList = UserList;
+            BindingContext = _UserSettings = UserSettings;
+            BindingContext = _CarList = CarList;
             BindingContext = _CurrentUser = CurrentUser;
+            BindingContext = _EntireJournal = EntireJournal;
         }
 
         private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -43,7 +49,8 @@ namespace CarAutoStarter.Views
             };
 
             _UserList.AddUser(NewUser);
-            Application.Current.MainPage = new NavigationPage(new MainPage(NewUser, _UserList));
+
+            Application.Current.MainPage = new NavigationPage(new MainPage(NewUser, _UserList, _UserSettings, _CarList, _EntireJournal));
 
         }
     }

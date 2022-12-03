@@ -42,7 +42,13 @@ namespace CarAutoStarter.Views
             Users UserList = new Users();
             UserList.AddUser(NewUser);
 
-            Application.Current.MainPage = new NavigationPage(new MainPage(NewUser, UserList));
+            Cars CarList = new Cars();
+
+            Settings UserSettings = new Settings();
+
+            Journal entireJournal = new Journal();
+
+            Application.Current.MainPage = new NavigationPage(new MainPage(NewUser, UserList, UserSettings, CarList, entireJournal));
 
         }
     }
